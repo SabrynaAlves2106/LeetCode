@@ -47,6 +47,14 @@ public class NumberOfSeniorCitizens
 {
     public int CountSeniors(string[] details)
     {
-        return default;
+        int quantity = 0;
+        foreach (var person in details)
+        {
+            int age = int.Parse(person.Substring(11, 2));
+            if (age > 60) 
+                quantity++;
+
+        }
+        return quantity;
     }
 }
